@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- <link rel="stylesheet" href="css/base.css"> -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <style>
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 轮播图 -->
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="javascript:;"><img src="/img/banner/banner1.jpg" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;"><img src="/img/banner/banner2.webp" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;"><img src="/img/banner/banner3.webp" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;"><img src="/img/banner/banner4.webp" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;"><img src="/img/banner/banner5.jpg" alt="" /></a>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <a href="" data-background="https://puui.qpic.cn/media_img/lena/PICpk64n8_580_1680/0">nihao</a>
+    <!-- Initialize Swiper -->
+    <script>
+        // 轮播图
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+</body>
+
+</html>

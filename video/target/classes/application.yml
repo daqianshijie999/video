@@ -1,0 +1,38 @@
+#设置端口
+server:
+       port: 80
+
+#配置数据库源
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/video?serveTimezone=Asia/Shanghai
+    username: root
+    password: root
+#    mybatis多对多时用的延迟加载解决方法
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+#    配置文件上传最大空间
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+
+
+#Mybatis配置
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #驼峰式命名
+#    aggressive-lazy-loading: true
+
+#qiniu:
+#  accessKey: hIRXrHaR-dHFrylIjllFVTRp9AplX-E9c9u_eAaR
+#  secretKey: dYdGMbSYpVjTuPgAkrjU9XNbaLapU8N4IhGsFO7I
+#  imgBucket: img-daqian
+#  imgDomain: img.daqian.shop
+#  videoBucket: Video-daqian
+#  videoDomain: Video.daqian.shop
+##  采用的协议
+#  protocol: http://

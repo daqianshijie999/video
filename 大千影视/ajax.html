@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大千世界</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        // $.ajax({
+        //     url: "http://127.0.0.1/user",
+        //     type: "get",
+        //     // dataType: "json",
+        //     contentType: "application/json; charset=utf-8",
+        //     success: function(result) {
+        //         console.log(result);
+        //         if (result.code == 200) {
+        //             console.log(获取成功);
+        //         } else {
+        //         }
+        //     },
+        // });
+        // $.get("http://127.0.0.1/user", function(data) {
+        //     console.log(data);
+        //     console.log(data.data);
+        //     if (data.code == 200) {
+        //         console.log("获取成功");
+        //     } else {
+        //     }
+        // });
+
+        // $.get("http://localhost/video", function(data) {
+        //     console.log(data);
+        //     if (data.code == 200) {
+        //         console.log("获取成功");
+        //     } else {
+
+        //     }
+        // });
+        $.get("http://localhost/video/banner", function(data) {
+            console.log(data);
+            // console.dir(data);
+            var swiper_ul = $('<ul></ul>');
+            // console.log(data[2].videoTypes[data[2].videoTypes.length - 1].description);
+            var swiper_li = $('<li class="swiper-slide fed-marg-top"><a class="fed-list-pics fed-part-5by2"' +
+                'href="/detail/249478.html"' +
+                'data-background="' + data[2].image + '">' +
+                '<div class="fed-swip-title fed-text-white fed-part-eone"><span' +
+                'class="fed-part-eone fed-font-xviii fed-swip-head">' + data[2].title + '</span><span' +
+                ' class="fed-part-eone fed-font-xii">' + data[2].videoTypes[2].description + '</span></div>' +
+                '</a></li>'
+            );
+            swiper_ul.append(swiper_li);
+            swiper_ul.append("你好");
+            // for (let i = 0; i < 3; i++) {
+            //     swiper_ul.append(swiper_li);
+            // }
+            console.log(swiper_ul.html());
+            console.log(swiper_ul.prop("outerHTML"));
+            // console.log(swiper_li.prop("outerHTML"));
+
+            // var swiper_li = $('<li class="swiper-slide fed-marg-top"><a class="fed-list-pics fed-part-5by2"' +
+            //     'href="/detail/249478.html"' +
+            //     'data-background="' + data[2].image + '">' +
+            //     '<div class="fed-swip-title fed-text-white fed-part-eone"><span' +
+            //     'class="fed-part-eone fed-font-xviii fed-swip-head">' + data[2].title + '</span><span' +
+            //     ' class="fed-part-eone fed-font-xii">' + data[2].videoTypes[2].description + '</span></div>' +
+            //     '</a></li>'
+            // );
+        });
+        // <li class="swiper-slide fed-marg-top"><a class="fed-list-pics fed-part-5by2 "
+        //                     href="/detail/249478.html"
+        //                     data-background="https://puui.qpic.cn/media_img/lena/PICpk64n8_580_1680/0">
+        //                     <div class="fed-swip-title fed-text-white fed-part-eone"><span
+        //                             class="fed-part-eone fed-font-xviii fed-swip-head">绝世武魂2</span><span
+        //                             class="fed-part-eone fed-font-xii">更新至146集</span></div>
+        //                 </a></li>
+
+    </script>
+</body>
+
+</html>
